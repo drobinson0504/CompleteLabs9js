@@ -1,16 +1,16 @@
 
 $(document).ready(function() {
 
-	var ul = $('ul');
-	$("ul").css({ "width": "180px", "height": "50px"});
-
-	$("li").hover(function() {
-		opacity: '0.25';
+	$("li").mouseover(function(){
+		$(this).fadeTo("slow", 0.25);
 	});
+	 $("li").mouseleave(function(){
+	 	$(this).fadeTo("slow", 1);
+	 });
 
 	$("li").click(function(){
-		$("li").css({"background-color":  "red"});
-		$('li: contains "Home", "About", "Contact", "My Porfolio", "Resume/Cred"').text('Clicked!');
+		$(this).css({'color':  'red'});
+		$(this).text("You Clicked It!!");
 	});
 
 	
